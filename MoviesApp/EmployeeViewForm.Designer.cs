@@ -96,14 +96,13 @@
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.formats = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridView6 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.empLogoutButton = new System.Windows.Forms.Button();
-            this.Plan_number = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.plan_count = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Cost = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.total_income = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabControl1.SuspendLayout();
             this.moviesTabPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.empMoviesDataGridView)).BeginInit();
@@ -136,9 +135,10 @@
             this.tabControl1.Controls.Add(this.transactionsTabPage);
             this.tabControl1.Controls.Add(this.reportsTabPage);
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
+            this.tabControl1.Margin = new System.Windows.Forms.Padding(6);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(986, 562);
+            this.tabControl1.Size = new System.Drawing.Size(1831, 1199);
             this.tabControl1.TabIndex = 0;
             this.tabControl1.SelectedIndexChanged += new System.EventHandler(this.tabControl1_SelectedIndexChanged);
             // 
@@ -154,10 +154,11 @@
             this.moviesTabPage.Controls.Add(this.mostRentedRadioButton);
             this.moviesTabPage.Controls.Add(this.searchFiltersRadioButton);
             this.moviesTabPage.Controls.Add(this.allMoviesRadioButton);
-            this.moviesTabPage.Location = new System.Drawing.Point(4, 24);
+            this.moviesTabPage.Location = new System.Drawing.Point(8, 46);
+            this.moviesTabPage.Margin = new System.Windows.Forms.Padding(6);
             this.moviesTabPage.Name = "moviesTabPage";
-            this.moviesTabPage.Padding = new System.Windows.Forms.Padding(3);
-            this.moviesTabPage.Size = new System.Drawing.Size(978, 534);
+            this.moviesTabPage.Padding = new System.Windows.Forms.Padding(6);
+            this.moviesTabPage.Size = new System.Drawing.Size(1815, 1145);
             this.moviesTabPage.TabIndex = 0;
             this.moviesTabPage.Text = "Movies";
             this.moviesTabPage.UseVisualStyleBackColor = true;
@@ -165,9 +166,10 @@
             // moviesSearchClearButton
             // 
             this.moviesSearchClearButton.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.moviesSearchClearButton.Location = new System.Drawing.Point(721, 105);
+            this.moviesSearchClearButton.Location = new System.Drawing.Point(1339, 224);
+            this.moviesSearchClearButton.Margin = new System.Windows.Forms.Padding(6);
             this.moviesSearchClearButton.Name = "moviesSearchClearButton";
-            this.moviesSearchClearButton.Size = new System.Drawing.Size(114, 28);
+            this.moviesSearchClearButton.Size = new System.Drawing.Size(212, 60);
             this.moviesSearchClearButton.TabIndex = 13;
             this.moviesSearchClearButton.Text = "Clear";
             this.moviesSearchClearButton.UseVisualStyleBackColor = true;
@@ -181,11 +183,12 @@
             this.Movie_ID,
             this.Movie_name,
             this.type_of_movie});
-            this.empMoviesDataGridView.Location = new System.Drawing.Point(17, 165);
+            this.empMoviesDataGridView.Location = new System.Drawing.Point(32, 352);
+            this.empMoviesDataGridView.Margin = new System.Windows.Forms.Padding(6);
             this.empMoviesDataGridView.Name = "empMoviesDataGridView";
             this.empMoviesDataGridView.RowHeadersWidth = 51;
             this.empMoviesDataGridView.RowTemplate.Height = 25;
-            this.empMoviesDataGridView.Size = new System.Drawing.Size(938, 344);
+            this.empMoviesDataGridView.Size = new System.Drawing.Size(1742, 734);
             this.empMoviesDataGridView.TabIndex = 11;
             this.empMoviesDataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.empMovies_CellContentClick);
             // 
@@ -213,9 +216,10 @@
             // moviesAddMovieButton
             // 
             this.moviesAddMovieButton.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.moviesAddMovieButton.Location = new System.Drawing.Point(841, 9);
+            this.moviesAddMovieButton.Location = new System.Drawing.Point(1562, 19);
+            this.moviesAddMovieButton.Margin = new System.Windows.Forms.Padding(6);
             this.moviesAddMovieButton.Name = "moviesAddMovieButton";
-            this.moviesAddMovieButton.Size = new System.Drawing.Size(114, 28);
+            this.moviesAddMovieButton.Size = new System.Drawing.Size(212, 60);
             this.moviesAddMovieButton.TabIndex = 12;
             this.moviesAddMovieButton.Text = "Add Movie";
             this.moviesAddMovieButton.UseVisualStyleBackColor = true;
@@ -224,9 +228,10 @@
             // moviesSearchButton
             // 
             this.moviesSearchButton.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.moviesSearchButton.Location = new System.Drawing.Point(841, 105);
+            this.moviesSearchButton.Location = new System.Drawing.Point(1562, 224);
+            this.moviesSearchButton.Margin = new System.Windows.Forms.Padding(6);
             this.moviesSearchButton.Name = "moviesSearchButton";
-            this.moviesSearchButton.Size = new System.Drawing.Size(114, 28);
+            this.moviesSearchButton.Size = new System.Drawing.Size(212, 60);
             this.moviesSearchButton.TabIndex = 10;
             this.moviesSearchButton.Text = "Search";
             this.moviesSearchButton.UseVisualStyleBackColor = true;
@@ -236,9 +241,10 @@
             // 
             this.genreComboBox.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.genreComboBox.FormattingEnabled = true;
-            this.genreComboBox.Location = new System.Drawing.Point(17, 107);
+            this.genreComboBox.Location = new System.Drawing.Point(32, 228);
+            this.genreComboBox.Margin = new System.Windows.Forms.Padding(6);
             this.genreComboBox.Name = "genreComboBox";
-            this.genreComboBox.Size = new System.Drawing.Size(419, 26);
+            this.genreComboBox.Size = new System.Drawing.Size(775, 44);
             this.genreComboBox.TabIndex = 7;
             this.genreComboBox.Text = "Genre";
             // 
@@ -246,27 +252,30 @@
             // 
             this.actorsNamesTextBox.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.actorsNamesTextBox.Hint = "Actor(s) names (comma separated)";
-            this.actorsNamesTextBox.Location = new System.Drawing.Point(17, 75);
+            this.actorsNamesTextBox.Location = new System.Drawing.Point(32, 160);
+            this.actorsNamesTextBox.Margin = new System.Windows.Forms.Padding(6);
             this.actorsNamesTextBox.Name = "actorsNamesTextBox";
-            this.actorsNamesTextBox.Size = new System.Drawing.Size(938, 26);
+            this.actorsNamesTextBox.Size = new System.Drawing.Size(1739, 44);
             this.actorsNamesTextBox.TabIndex = 6;
             // 
             // movieNameTextBox
             // 
             this.movieNameTextBox.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.movieNameTextBox.Hint = "Movie Name";
-            this.movieNameTextBox.Location = new System.Drawing.Point(17, 43);
+            this.movieNameTextBox.Location = new System.Drawing.Point(32, 92);
+            this.movieNameTextBox.Margin = new System.Windows.Forms.Padding(6);
             this.movieNameTextBox.Name = "movieNameTextBox";
-            this.movieNameTextBox.Size = new System.Drawing.Size(938, 26);
+            this.movieNameTextBox.Size = new System.Drawing.Size(1739, 44);
             this.movieNameTextBox.TabIndex = 5;
             // 
             // mostRentedRadioButton
             // 
             this.mostRentedRadioButton.AutoSize = true;
             this.mostRentedRadioButton.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.mostRentedRadioButton.Location = new System.Drawing.Point(249, 6);
+            this.mostRentedRadioButton.Location = new System.Drawing.Point(462, 13);
+            this.mostRentedRadioButton.Margin = new System.Windows.Forms.Padding(6);
             this.mostRentedRadioButton.Name = "mostRentedRadioButton";
-            this.mostRentedRadioButton.Size = new System.Drawing.Size(170, 22);
+            this.mostRentedRadioButton.Size = new System.Drawing.Size(339, 40);
             this.mostRentedRadioButton.TabIndex = 3;
             this.mostRentedRadioButton.Text = "Most Actively Rented";
             this.mostRentedRadioButton.UseVisualStyleBackColor = true;
@@ -277,9 +286,10 @@
             this.searchFiltersRadioButton.AutoSize = true;
             this.searchFiltersRadioButton.Checked = true;
             this.searchFiltersRadioButton.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.searchFiltersRadioButton.Location = new System.Drawing.Point(120, 6);
+            this.searchFiltersRadioButton.Location = new System.Drawing.Point(223, 13);
+            this.searchFiltersRadioButton.Margin = new System.Windows.Forms.Padding(6);
             this.searchFiltersRadioButton.Name = "searchFiltersRadioButton";
-            this.searchFiltersRadioButton.Size = new System.Drawing.Size(123, 22);
+            this.searchFiltersRadioButton.Size = new System.Drawing.Size(242, 40);
             this.searchFiltersRadioButton.TabIndex = 2;
             this.searchFiltersRadioButton.TabStop = true;
             this.searchFiltersRadioButton.Text = "Search Filters";
@@ -290,9 +300,10 @@
             // 
             this.allMoviesRadioButton.AutoSize = true;
             this.allMoviesRadioButton.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.allMoviesRadioButton.Location = new System.Drawing.Point(17, 6);
+            this.allMoviesRadioButton.Location = new System.Drawing.Point(32, 13);
+            this.allMoviesRadioButton.Margin = new System.Windows.Forms.Padding(6);
             this.allMoviesRadioButton.Name = "allMoviesRadioButton";
-            this.allMoviesRadioButton.Size = new System.Drawing.Size(97, 22);
+            this.allMoviesRadioButton.Size = new System.Drawing.Size(189, 40);
             this.allMoviesRadioButton.TabIndex = 1;
             this.allMoviesRadioButton.Text = "All Movies";
             this.allMoviesRadioButton.UseVisualStyleBackColor = true;
@@ -304,10 +315,11 @@
             this.actorsTabPage.Controls.Add(this.actorsAddButton);
             this.actorsTabPage.Controls.Add(this.actorsSearchButton);
             this.actorsTabPage.Controls.Add(this.empActorSearchTextBox);
-            this.actorsTabPage.Location = new System.Drawing.Point(4, 24);
+            this.actorsTabPage.Location = new System.Drawing.Point(8, 46);
+            this.actorsTabPage.Margin = new System.Windows.Forms.Padding(6);
             this.actorsTabPage.Name = "actorsTabPage";
-            this.actorsTabPage.Padding = new System.Windows.Forms.Padding(3);
-            this.actorsTabPage.Size = new System.Drawing.Size(978, 534);
+            this.actorsTabPage.Padding = new System.Windows.Forms.Padding(6);
+            this.actorsTabPage.Size = new System.Drawing.Size(1815, 1145);
             this.actorsTabPage.TabIndex = 1;
             this.actorsTabPage.Text = "Actors";
             this.actorsTabPage.UseVisualStyleBackColor = true;
@@ -322,19 +334,22 @@
             this.actorLastName,
             this.actorGender,
             this.actorAge});
-            this.empActorsDataGridView.Location = new System.Drawing.Point(33, 66);
+            this.empActorsDataGridView.Location = new System.Drawing.Point(61, 141);
+            this.empActorsDataGridView.Margin = new System.Windows.Forms.Padding(6);
             this.empActorsDataGridView.Name = "empActorsDataGridView";
             this.empActorsDataGridView.RowHeadersWidth = 51;
             this.empActorsDataGridView.RowTemplate.Height = 25;
-            this.empActorsDataGridView.Size = new System.Drawing.Size(912, 425);
+            this.empActorsDataGridView.Size = new System.Drawing.Size(1694, 907);
             this.empActorsDataGridView.TabIndex = 8;
             this.empActorsDataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.empActors_CellContentClick);
             // 
             // actorId
             // 
             this.actorId.HeaderText = "Id";
+            this.actorId.MinimumWidth = 10;
             this.actorId.Name = "actorId";
             this.actorId.Visible = false;
+            this.actorId.Width = 200;
             // 
             // actorFirstName
             // 
@@ -353,19 +368,24 @@
             // actorGender
             // 
             this.actorGender.HeaderText = "Gender";
+            this.actorGender.MinimumWidth = 10;
             this.actorGender.Name = "actorGender";
+            this.actorGender.Width = 200;
             // 
             // actorAge
             // 
             this.actorAge.HeaderText = "Age";
+            this.actorAge.MinimumWidth = 10;
             this.actorAge.Name = "actorAge";
+            this.actorAge.Width = 200;
             // 
             // actorsAddButton
             // 
             this.actorsAddButton.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.actorsAddButton.Location = new System.Drawing.Point(768, 17);
+            this.actorsAddButton.Location = new System.Drawing.Point(1426, 36);
+            this.actorsAddButton.Margin = new System.Windows.Forms.Padding(6);
             this.actorsAddButton.Name = "actorsAddButton";
-            this.actorsAddButton.Size = new System.Drawing.Size(177, 28);
+            this.actorsAddButton.Size = new System.Drawing.Size(329, 60);
             this.actorsAddButton.TabIndex = 7;
             this.actorsAddButton.Text = "Add Actor";
             this.actorsAddButton.UseVisualStyleBackColor = true;
@@ -374,9 +394,10 @@
             // actorsSearchButton
             // 
             this.actorsSearchButton.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.actorsSearchButton.Location = new System.Drawing.Point(589, 17);
+            this.actorsSearchButton.Location = new System.Drawing.Point(1094, 36);
+            this.actorsSearchButton.Margin = new System.Windows.Forms.Padding(6);
             this.actorsSearchButton.Name = "actorsSearchButton";
-            this.actorsSearchButton.Size = new System.Drawing.Size(177, 28);
+            this.actorsSearchButton.Size = new System.Drawing.Size(329, 60);
             this.actorsSearchButton.TabIndex = 1;
             this.actorsSearchButton.Text = "Search";
             this.actorsSearchButton.UseVisualStyleBackColor = true;
@@ -386,18 +407,20 @@
             // 
             this.empActorSearchTextBox.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.empActorSearchTextBox.Hint = "Search Actor";
-            this.empActorSearchTextBox.Location = new System.Drawing.Point(32, 18);
+            this.empActorSearchTextBox.Location = new System.Drawing.Point(59, 38);
+            this.empActorSearchTextBox.Margin = new System.Windows.Forms.Padding(6);
             this.empActorSearchTextBox.Name = "empActorSearchTextBox";
-            this.empActorSearchTextBox.Size = new System.Drawing.Size(552, 26);
+            this.empActorSearchTextBox.Size = new System.Drawing.Size(1022, 44);
             this.empActorSearchTextBox.TabIndex = 0;
             // 
             // customersTabPage
             // 
             this.customersTabPage.Controls.Add(this.customersTabControl);
-            this.customersTabPage.Location = new System.Drawing.Point(4, 24);
+            this.customersTabPage.Location = new System.Drawing.Point(8, 46);
+            this.customersTabPage.Margin = new System.Windows.Forms.Padding(6);
             this.customersTabPage.Name = "customersTabPage";
-            this.customersTabPage.Padding = new System.Windows.Forms.Padding(3);
-            this.customersTabPage.Size = new System.Drawing.Size(978, 534);
+            this.customersTabPage.Padding = new System.Windows.Forms.Padding(6);
+            this.customersTabPage.Size = new System.Drawing.Size(1815, 1145);
             this.customersTabPage.TabIndex = 2;
             this.customersTabPage.Text = "Customers";
             this.customersTabPage.UseVisualStyleBackColor = true;
@@ -407,10 +430,11 @@
             this.customersTabControl.Alignment = System.Windows.Forms.TabAlignment.Bottom;
             this.customersTabControl.Controls.Add(this.searchCustomersTabPage);
             this.customersTabControl.Controls.Add(this.mailingListTabPage);
-            this.customersTabControl.Location = new System.Drawing.Point(-2, 0);
+            this.customersTabControl.Location = new System.Drawing.Point(-4, 0);
+            this.customersTabControl.Margin = new System.Windows.Forms.Padding(6);
             this.customersTabControl.Name = "customersTabControl";
             this.customersTabControl.SelectedIndex = 0;
-            this.customersTabControl.Size = new System.Drawing.Size(982, 525);
+            this.customersTabControl.Size = new System.Drawing.Size(1824, 1120);
             this.customersTabControl.TabIndex = 2;
             // 
             // searchCustomersTabPage
@@ -419,10 +443,11 @@
             this.searchCustomersTabPage.Controls.Add(this.searchCustomersButton);
             this.searchCustomersTabPage.Controls.Add(this.searchCustomersTextBox);
             this.searchCustomersTabPage.Controls.Add(this.empCustomerGridView);
-            this.searchCustomersTabPage.Location = new System.Drawing.Point(4, 4);
+            this.searchCustomersTabPage.Location = new System.Drawing.Point(8, 8);
+            this.searchCustomersTabPage.Margin = new System.Windows.Forms.Padding(6);
             this.searchCustomersTabPage.Name = "searchCustomersTabPage";
-            this.searchCustomersTabPage.Padding = new System.Windows.Forms.Padding(3);
-            this.searchCustomersTabPage.Size = new System.Drawing.Size(974, 497);
+            this.searchCustomersTabPage.Padding = new System.Windows.Forms.Padding(6);
+            this.searchCustomersTabPage.Size = new System.Drawing.Size(1808, 1066);
             this.searchCustomersTabPage.TabIndex = 0;
             this.searchCustomersTabPage.Text = "Search Customers";
             this.searchCustomersTabPage.UseVisualStyleBackColor = true;
@@ -430,9 +455,10 @@
             // launchCustomerButton
             // 
             this.launchCustomerButton.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.launchCustomerButton.Location = new System.Drawing.Point(773, 17);
+            this.launchCustomerButton.Location = new System.Drawing.Point(1436, 36);
+            this.launchCustomerButton.Margin = new System.Windows.Forms.Padding(6);
             this.launchCustomerButton.Name = "launchCustomerButton";
-            this.launchCustomerButton.Size = new System.Drawing.Size(169, 28);
+            this.launchCustomerButton.Size = new System.Drawing.Size(314, 60);
             this.launchCustomerButton.TabIndex = 6;
             this.launchCustomerButton.Text = "Add New";
             this.launchCustomerButton.UseVisualStyleBackColor = true;
@@ -441,9 +467,10 @@
             // searchCustomersButton
             // 
             this.searchCustomersButton.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.searchCustomersButton.Location = new System.Drawing.Point(590, 17);
+            this.searchCustomersButton.Location = new System.Drawing.Point(1096, 36);
+            this.searchCustomersButton.Margin = new System.Windows.Forms.Padding(6);
             this.searchCustomersButton.Name = "searchCustomersButton";
-            this.searchCustomersButton.Size = new System.Drawing.Size(177, 28);
+            this.searchCustomersButton.Size = new System.Drawing.Size(329, 60);
             this.searchCustomersButton.TabIndex = 5;
             this.searchCustomersButton.Text = "Search";
             this.searchCustomersButton.UseVisualStyleBackColor = true;
@@ -452,30 +479,33 @@
             // 
             this.searchCustomersTextBox.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.searchCustomersTextBox.Hint = "Search Customer";
-            this.searchCustomersTextBox.Location = new System.Drawing.Point(32, 18);
+            this.searchCustomersTextBox.Location = new System.Drawing.Point(59, 38);
+            this.searchCustomersTextBox.Margin = new System.Windows.Forms.Padding(6);
             this.searchCustomersTextBox.Name = "searchCustomersTextBox";
-            this.searchCustomersTextBox.Size = new System.Drawing.Size(552, 26);
+            this.searchCustomersTextBox.Size = new System.Drawing.Size(1022, 44);
             this.searchCustomersTextBox.TabIndex = 4;
             // 
             // empCustomerGridView
             // 
             this.empCustomerGridView.BackgroundColor = System.Drawing.SystemColors.Window;
             this.empCustomerGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.empCustomerGridView.Location = new System.Drawing.Point(31, 66);
+            this.empCustomerGridView.Location = new System.Drawing.Point(58, 141);
+            this.empCustomerGridView.Margin = new System.Windows.Forms.Padding(6);
             this.empCustomerGridView.Name = "empCustomerGridView";
             this.empCustomerGridView.RowHeadersWidth = 51;
             this.empCustomerGridView.RowTemplate.Height = 25;
-            this.empCustomerGridView.Size = new System.Drawing.Size(912, 425);
+            this.empCustomerGridView.Size = new System.Drawing.Size(1694, 907);
             this.empCustomerGridView.TabIndex = 0;
             // 
             // mailingListTabPage
             // 
             this.mailingListTabPage.Controls.Add(this.dataGridView4);
             this.mailingListTabPage.Controls.Add(this.mailingListLabel);
-            this.mailingListTabPage.Location = new System.Drawing.Point(4, 4);
+            this.mailingListTabPage.Location = new System.Drawing.Point(8, 8);
+            this.mailingListTabPage.Margin = new System.Windows.Forms.Padding(6);
             this.mailingListTabPage.Name = "mailingListTabPage";
-            this.mailingListTabPage.Padding = new System.Windows.Forms.Padding(3);
-            this.mailingListTabPage.Size = new System.Drawing.Size(974, 497);
+            this.mailingListTabPage.Padding = new System.Windows.Forms.Padding(6);
+            this.mailingListTabPage.Size = new System.Drawing.Size(1808, 1066);
             this.mailingListTabPage.TabIndex = 1;
             this.mailingListTabPage.Text = "Mailing List";
             this.mailingListTabPage.UseVisualStyleBackColor = true;
@@ -484,20 +514,22 @@
             // 
             this.dataGridView4.BackgroundColor = System.Drawing.SystemColors.Window;
             this.dataGridView4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView4.Location = new System.Drawing.Point(31, 65);
+            this.dataGridView4.Location = new System.Drawing.Point(58, 139);
+            this.dataGridView4.Margin = new System.Windows.Forms.Padding(6);
             this.dataGridView4.Name = "dataGridView4";
             this.dataGridView4.RowHeadersWidth = 51;
             this.dataGridView4.RowTemplate.Height = 25;
-            this.dataGridView4.Size = new System.Drawing.Size(912, 422);
+            this.dataGridView4.Size = new System.Drawing.Size(1694, 900);
             this.dataGridView4.TabIndex = 1;
             // 
             // mailingListLabel
             // 
             this.mailingListLabel.AutoSize = true;
             this.mailingListLabel.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.mailingListLabel.Location = new System.Drawing.Point(31, 24);
+            this.mailingListLabel.Location = new System.Drawing.Point(58, 51);
+            this.mailingListLabel.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.mailingListLabel.Name = "mailingListLabel";
-            this.mailingListLabel.Size = new System.Drawing.Size(87, 18);
+            this.mailingListLabel.Size = new System.Drawing.Size(174, 36);
             this.mailingListLabel.TabIndex = 0;
             this.mailingListLabel.Text = "Mailing List";
             // 
@@ -507,10 +539,11 @@
             this.employeesTabPage.Controls.Add(this.button4);
             this.employeesTabPage.Controls.Add(this.searchEmployeesButton);
             this.employeesTabPage.Controls.Add(this.exTextBox2);
-            this.employeesTabPage.Location = new System.Drawing.Point(4, 24);
+            this.employeesTabPage.Location = new System.Drawing.Point(8, 46);
+            this.employeesTabPage.Margin = new System.Windows.Forms.Padding(6);
             this.employeesTabPage.Name = "employeesTabPage";
-            this.employeesTabPage.Padding = new System.Windows.Forms.Padding(3);
-            this.employeesTabPage.Size = new System.Drawing.Size(978, 534);
+            this.employeesTabPage.Padding = new System.Windows.Forms.Padding(6);
+            this.employeesTabPage.Size = new System.Drawing.Size(1815, 1145);
             this.employeesTabPage.TabIndex = 3;
             this.employeesTabPage.Text = "Employees";
             this.employeesTabPage.UseVisualStyleBackColor = true;
@@ -519,19 +552,21 @@
             // 
             this.empEmployeesDataGridView.BackgroundColor = System.Drawing.SystemColors.Window;
             this.empEmployeesDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.empEmployeesDataGridView.Location = new System.Drawing.Point(33, 70);
+            this.empEmployeesDataGridView.Location = new System.Drawing.Point(61, 149);
+            this.empEmployeesDataGridView.Margin = new System.Windows.Forms.Padding(6);
             this.empEmployeesDataGridView.Name = "empEmployeesDataGridView";
             this.empEmployeesDataGridView.RowHeadersWidth = 51;
             this.empEmployeesDataGridView.RowTemplate.Height = 25;
-            this.empEmployeesDataGridView.Size = new System.Drawing.Size(912, 429);
+            this.empEmployeesDataGridView.Size = new System.Drawing.Size(1694, 915);
             this.empEmployeesDataGridView.TabIndex = 3;
             // 
             // button4
             // 
             this.button4.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button4.Location = new System.Drawing.Point(774, 21);
+            this.button4.Location = new System.Drawing.Point(1437, 45);
+            this.button4.Margin = new System.Windows.Forms.Padding(6);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(171, 28);
+            this.button4.Size = new System.Drawing.Size(318, 60);
             this.button4.TabIndex = 2;
             this.button4.Text = "Add New";
             this.button4.UseVisualStyleBackColor = true;
@@ -540,9 +575,10 @@
             // searchEmployeesButton
             // 
             this.searchEmployeesButton.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.searchEmployeesButton.Location = new System.Drawing.Point(591, 21);
+            this.searchEmployeesButton.Location = new System.Drawing.Point(1098, 45);
+            this.searchEmployeesButton.Margin = new System.Windows.Forms.Padding(6);
             this.searchEmployeesButton.Name = "searchEmployeesButton";
-            this.searchEmployeesButton.Size = new System.Drawing.Size(177, 28);
+            this.searchEmployeesButton.Size = new System.Drawing.Size(329, 60);
             this.searchEmployeesButton.TabIndex = 1;
             this.searchEmployeesButton.Text = "Search";
             this.searchEmployeesButton.UseVisualStyleBackColor = true;
@@ -551,9 +587,10 @@
             // 
             this.exTextBox2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.exTextBox2.Hint = "Search Employee";
-            this.exTextBox2.Location = new System.Drawing.Point(33, 22);
+            this.exTextBox2.Location = new System.Drawing.Point(61, 47);
+            this.exTextBox2.Margin = new System.Windows.Forms.Padding(6);
             this.exTextBox2.Name = "exTextBox2";
-            this.exTextBox2.Size = new System.Drawing.Size(552, 26);
+            this.exTextBox2.Size = new System.Drawing.Size(1022, 44);
             this.exTextBox2.TabIndex = 0;
             // 
             // transactionsTabPage
@@ -565,10 +602,11 @@
             this.transactionsTabPage.Controls.Add(this.exTextBox1);
             this.transactionsTabPage.Controls.Add(this.comboBox1);
             this.transactionsTabPage.Controls.Add(this.exTextBox4);
-            this.transactionsTabPage.Location = new System.Drawing.Point(4, 24);
+            this.transactionsTabPage.Location = new System.Drawing.Point(8, 46);
+            this.transactionsTabPage.Margin = new System.Windows.Forms.Padding(6);
             this.transactionsTabPage.Name = "transactionsTabPage";
-            this.transactionsTabPage.Padding = new System.Windows.Forms.Padding(3);
-            this.transactionsTabPage.Size = new System.Drawing.Size(978, 534);
+            this.transactionsTabPage.Padding = new System.Windows.Forms.Padding(6);
+            this.transactionsTabPage.Size = new System.Drawing.Size(1815, 1145);
             this.transactionsTabPage.TabIndex = 4;
             this.transactionsTabPage.Text = "Transactions";
             this.transactionsTabPage.UseVisualStyleBackColor = true;
@@ -576,9 +614,10 @@
             // empNewTransactionButton
             // 
             this.empNewTransactionButton.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.empNewTransactionButton.Location = new System.Drawing.Point(775, 19);
+            this.empNewTransactionButton.Location = new System.Drawing.Point(1439, 41);
+            this.empNewTransactionButton.Margin = new System.Windows.Forms.Padding(6);
             this.empNewTransactionButton.Name = "empNewTransactionButton";
-            this.empNewTransactionButton.Size = new System.Drawing.Size(169, 28);
+            this.empNewTransactionButton.Size = new System.Drawing.Size(314, 60);
             this.empNewTransactionButton.TabIndex = 15;
             this.empNewTransactionButton.Text = "Add New";
             this.empNewTransactionButton.UseVisualStyleBackColor = true;
@@ -588,29 +627,32 @@
             // 
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.Window;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(32, 122);
+            this.dataGridView1.Location = new System.Drawing.Point(59, 260);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(6);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 25;
-            this.dataGridView1.Size = new System.Drawing.Size(912, 342);
+            this.dataGridView1.Size = new System.Drawing.Size(1694, 730);
             this.dataGridView1.TabIndex = 14;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label5.Location = new System.Drawing.Point(32, 21);
+            this.label5.Location = new System.Drawing.Point(59, 45);
+            this.label5.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(110, 18);
+            this.label5.Size = new System.Drawing.Size(222, 36);
             this.label5.TabIndex = 13;
             this.label5.Text = "Search History";
             // 
             // transactionsSearchButton
             // 
             this.transactionsSearchButton.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.transactionsSearchButton.Location = new System.Drawing.Point(775, 85);
+            this.transactionsSearchButton.Location = new System.Drawing.Point(1439, 181);
+            this.transactionsSearchButton.Margin = new System.Windows.Forms.Padding(6);
             this.transactionsSearchButton.Name = "transactionsSearchButton";
-            this.transactionsSearchButton.Size = new System.Drawing.Size(169, 28);
+            this.transactionsSearchButton.Size = new System.Drawing.Size(314, 60);
             this.transactionsSearchButton.TabIndex = 12;
             this.transactionsSearchButton.Text = "Search";
             this.transactionsSearchButton.UseVisualStyleBackColor = true;
@@ -619,9 +661,10 @@
             // 
             this.exTextBox1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.exTextBox1.Hint = "Customer Name";
-            this.exTextBox1.Location = new System.Drawing.Point(261, 85);
+            this.exTextBox1.Location = new System.Drawing.Point(485, 181);
+            this.exTextBox1.Margin = new System.Windows.Forms.Padding(6);
             this.exTextBox1.Name = "exTextBox1";
-            this.exTextBox1.Size = new System.Drawing.Size(508, 26);
+            this.exTextBox1.Size = new System.Drawing.Size(940, 44);
             this.exTextBox1.TabIndex = 11;
             // 
             // comboBox1
@@ -633,9 +676,10 @@
             "Drama",
             "Action",
             "Foreign"});
-            this.comboBox1.Location = new System.Drawing.Point(32, 85);
+            this.comboBox1.Location = new System.Drawing.Point(59, 181);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(6);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(223, 26);
+            this.comboBox1.Size = new System.Drawing.Size(411, 44);
             this.comboBox1.TabIndex = 10;
             this.comboBox1.Text = "Genre";
             // 
@@ -643,9 +687,10 @@
             // 
             this.exTextBox4.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.exTextBox4.Hint = "Movie Name";
-            this.exTextBox4.Location = new System.Drawing.Point(32, 53);
+            this.exTextBox4.Location = new System.Drawing.Point(59, 113);
+            this.exTextBox4.Margin = new System.Windows.Forms.Padding(6);
             this.exTextBox4.Name = "exTextBox4";
-            this.exTextBox4.Size = new System.Drawing.Size(912, 26);
+            this.exTextBox4.Size = new System.Drawing.Size(1690, 44);
             this.exTextBox4.TabIndex = 9;
             // 
             // reportsTabPage
@@ -666,10 +711,13 @@
             this.reportsTabPage.Controls.Add(this.reportsDataGridView);
             this.reportsTabPage.Controls.Add(this.dataGridView5);
             this.reportsTabPage.Controls.Add(this.dataGridView3);
-            this.reportsTabPage.Location = new System.Drawing.Point(4, 24);
+            this.reportsTabPage.Controls.Add(this.dataGridView6);
+            this.reportsTabPage.Controls.Add(this.dataGridView2);
+            this.reportsTabPage.Location = new System.Drawing.Point(8, 46);
+            this.reportsTabPage.Margin = new System.Windows.Forms.Padding(6);
             this.reportsTabPage.Name = "reportsTabPage";
-            this.reportsTabPage.Padding = new System.Windows.Forms.Padding(3);
-            this.reportsTabPage.Size = new System.Drawing.Size(978, 534);
+            this.reportsTabPage.Padding = new System.Windows.Forms.Padding(6);
+            this.reportsTabPage.Size = new System.Drawing.Size(1815, 1145);
             this.reportsTabPage.TabIndex = 5;
             this.reportsTabPage.Text = "Reports";
             this.reportsTabPage.UseVisualStyleBackColor = true;
@@ -691,9 +739,10 @@
             "October",
             "November",
             "December"});
-            this.MonthComboBox.Location = new System.Drawing.Point(338, 50);
+            this.MonthComboBox.Location = new System.Drawing.Point(628, 107);
+            this.MonthComboBox.Margin = new System.Windows.Forms.Padding(6);
             this.MonthComboBox.Name = "MonthComboBox";
-            this.MonthComboBox.Size = new System.Drawing.Size(165, 26);
+            this.MonthComboBox.Size = new System.Drawing.Size(303, 44);
             this.MonthComboBox.TabIndex = 17;
             this.MonthComboBox.Text = "Month";
             this.MonthComboBox.SelectedIndexChanged += new System.EventHandler(this.MonthComboBox_SelectedIndexChanged);
@@ -708,9 +757,10 @@
             "Third Quarter",
             "Forth Quarter",
             "Full Year"});
-            this.QuarterComboBox.Location = new System.Drawing.Point(167, 50);
+            this.QuarterComboBox.Location = new System.Drawing.Point(310, 107);
+            this.QuarterComboBox.Margin = new System.Windows.Forms.Padding(6);
             this.QuarterComboBox.Name = "QuarterComboBox";
-            this.QuarterComboBox.Size = new System.Drawing.Size(165, 26);
+            this.QuarterComboBox.Size = new System.Drawing.Size(303, 44);
             this.QuarterComboBox.TabIndex = 16;
             this.QuarterComboBox.Text = "Quarter";
             this.QuarterComboBox.SelectedIndexChanged += new System.EventHandler(this.QuarterComboBox_SelectedIndexChanged);
@@ -730,9 +780,10 @@
             "2024",
             "2025",
             "2026"});
-            this.YearComboBox.Location = new System.Drawing.Point(8, 50);
+            this.YearComboBox.Location = new System.Drawing.Point(15, 107);
+            this.YearComboBox.Margin = new System.Windows.Forms.Padding(6);
             this.YearComboBox.Name = "YearComboBox";
-            this.YearComboBox.Size = new System.Drawing.Size(153, 26);
+            this.YearComboBox.Size = new System.Drawing.Size(281, 44);
             this.YearComboBox.TabIndex = 15;
             this.YearComboBox.Text = "Year";
             this.YearComboBox.SelectedIndexChanged += new System.EventHandler(this.YearComboBox_SelectedIndexChanged);
@@ -740,9 +791,10 @@
             // reportsGenerateButton
             // 
             this.reportsGenerateButton.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.reportsGenerateButton.Location = new System.Drawing.Point(818, 50);
+            this.reportsGenerateButton.Location = new System.Drawing.Point(1519, 107);
+            this.reportsGenerateButton.Margin = new System.Windows.Forms.Padding(6);
             this.reportsGenerateButton.Name = "reportsGenerateButton";
-            this.reportsGenerateButton.Size = new System.Drawing.Size(150, 28);
+            this.reportsGenerateButton.Size = new System.Drawing.Size(279, 60);
             this.reportsGenerateButton.TabIndex = 10;
             this.reportsGenerateButton.Text = "Generate Report";
             this.reportsGenerateButton.UseVisualStyleBackColor = true;
@@ -751,9 +803,10 @@
             // report5Button
             // 
             this.report5Button.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.report5Button.Location = new System.Drawing.Point(448, 489);
+            this.report5Button.Location = new System.Drawing.Point(832, 1043);
+            this.report5Button.Margin = new System.Windows.Forms.Padding(6);
             this.report5Button.Name = "report5Button";
-            this.report5Button.Size = new System.Drawing.Size(104, 30);
+            this.report5Button.Size = new System.Drawing.Size(193, 64);
             this.report5Button.TabIndex = 8;
             this.report5Button.Text = "Report 5";
             this.report5Button.UseVisualStyleBackColor = true;
@@ -762,9 +815,10 @@
             // report4Button
             // 
             this.report4Button.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.report4Button.Location = new System.Drawing.Point(338, 489);
+            this.report4Button.Location = new System.Drawing.Point(628, 1043);
+            this.report4Button.Margin = new System.Windows.Forms.Padding(6);
             this.report4Button.Name = "report4Button";
-            this.report4Button.Size = new System.Drawing.Size(104, 30);
+            this.report4Button.Size = new System.Drawing.Size(193, 64);
             this.report4Button.TabIndex = 7;
             this.report4Button.Text = "Report 4";
             this.report4Button.UseVisualStyleBackColor = true;
@@ -773,9 +827,10 @@
             // report3Button
             // 
             this.report3Button.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.report3Button.Location = new System.Drawing.Point(228, 489);
+            this.report3Button.Location = new System.Drawing.Point(423, 1043);
+            this.report3Button.Margin = new System.Windows.Forms.Padding(6);
             this.report3Button.Name = "report3Button";
-            this.report3Button.Size = new System.Drawing.Size(104, 30);
+            this.report3Button.Size = new System.Drawing.Size(193, 64);
             this.report3Button.TabIndex = 6;
             this.report3Button.Text = "Report 3";
             this.report3Button.UseVisualStyleBackColor = true;
@@ -784,9 +839,10 @@
             // report2Button
             // 
             this.report2Button.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.report2Button.Location = new System.Drawing.Point(118, 489);
+            this.report2Button.Location = new System.Drawing.Point(219, 1043);
+            this.report2Button.Margin = new System.Windows.Forms.Padding(6);
             this.report2Button.Name = "report2Button";
-            this.report2Button.Size = new System.Drawing.Size(104, 30);
+            this.report2Button.Size = new System.Drawing.Size(193, 64);
             this.report2Button.TabIndex = 5;
             this.report2Button.Text = "Report 2";
             this.report2Button.UseVisualStyleBackColor = true;
@@ -795,9 +851,10 @@
             // report1Button
             // 
             this.report1Button.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.report1Button.Location = new System.Drawing.Point(8, 489);
+            this.report1Button.Location = new System.Drawing.Point(15, 1043);
+            this.report1Button.Margin = new System.Windows.Forms.Padding(6);
             this.report1Button.Name = "report1Button";
-            this.report1Button.Size = new System.Drawing.Size(104, 30);
+            this.report1Button.Size = new System.Drawing.Size(193, 64);
             this.report1Button.TabIndex = 4;
             this.report1Button.Text = "Report 1";
             this.report1Button.UseVisualStyleBackColor = true;
@@ -805,19 +862,21 @@
             // 
             // reportsDescriptionTextBox
             // 
-            this.reportsDescriptionTextBox.Location = new System.Drawing.Point(8, 24);
+            this.reportsDescriptionTextBox.Location = new System.Drawing.Point(15, 51);
+            this.reportsDescriptionTextBox.Margin = new System.Windows.Forms.Padding(6);
             this.reportsDescriptionTextBox.Name = "reportsDescriptionTextBox";
             this.reportsDescriptionTextBox.ReadOnly = true;
-            this.reportsDescriptionTextBox.Size = new System.Drawing.Size(960, 23);
+            this.reportsDescriptionTextBox.Size = new System.Drawing.Size(1779, 39);
             this.reportsDescriptionTextBox.TabIndex = 3;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(8, 3);
+            this.label1.Location = new System.Drawing.Point(15, 6);
+            this.label1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(63, 18);
+            this.label1.Size = new System.Drawing.Size(125, 36);
             this.label1.TabIndex = 2;
             this.label1.Text = "Reports";
             // 
@@ -829,30 +888,37 @@
             this.Revenue,
             this.Total_Movie_Cost,
             this.Profits});
-            this.reportsDataGridView.Location = new System.Drawing.Point(8, 82);
+            this.reportsDataGridView.Location = new System.Drawing.Point(15, 175);
+            this.reportsDataGridView.Margin = new System.Windows.Forms.Padding(6);
             this.reportsDataGridView.Name = "reportsDataGridView";
             this.reportsDataGridView.RowHeadersWidth = 51;
             this.reportsDataGridView.RowTemplate.Height = 25;
-            this.reportsDataGridView.Size = new System.Drawing.Size(960, 407);
+            this.reportsDataGridView.Size = new System.Drawing.Size(1783, 868);
             this.reportsDataGridView.TabIndex = 9;
             // 
             // Revenue
             // 
             this.Revenue.HeaderText = "Revenue";
+            this.Revenue.MinimumWidth = 10;
             this.Revenue.Name = "Revenue";
             this.Revenue.ReadOnly = true;
+            this.Revenue.Width = 200;
             // 
             // Total_Movie_Cost
             // 
             this.Total_Movie_Cost.HeaderText = "Movie Cost";
+            this.Total_Movie_Cost.MinimumWidth = 10;
             this.Total_Movie_Cost.Name = "Total_Movie_Cost";
             this.Total_Movie_Cost.ReadOnly = true;
+            this.Total_Movie_Cost.Width = 200;
             // 
             // Profits
             // 
             this.Profits.HeaderText = "Profits";
+            this.Profits.MinimumWidth = 10;
             this.Profits.Name = "Profits";
             this.Profits.ReadOnly = true;
+            this.Profits.Width = 200;
             // 
             // dataGridView5
             // 
@@ -860,37 +926,109 @@
             this.dataGridView5.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView5.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn3});
-            this.dataGridView5.Location = new System.Drawing.Point(8, 82);
+            this.dataGridView5.Location = new System.Drawing.Point(15, 175);
+            this.dataGridView5.Margin = new System.Windows.Forms.Padding(6);
             this.dataGridView5.Name = "dataGridView5";
             this.dataGridView5.RowHeadersWidth = 51;
             this.dataGridView5.RowTemplate.Height = 25;
-            this.dataGridView5.Size = new System.Drawing.Size(960, 407);
+            this.dataGridView5.Size = new System.Drawing.Size(1783, 868);
             this.dataGridView5.TabIndex = 13;
             // 
             // dataGridViewTextBoxColumn3
             // 
             this.dataGridViewTextBoxColumn3.HeaderText = "report5_grid";
+            this.dataGridViewTextBoxColumn3.MinimumWidth = 10;
             this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
             this.dataGridViewTextBoxColumn3.ReadOnly = true;
+            this.dataGridViewTextBoxColumn3.Width = 200;
             // 
             // dataGridView3
             // 
+            this.dataGridView3.AllowUserToAddRows = false;
+            this.dataGridView3.AllowUserToDeleteRows = false;
             this.dataGridView3.BackgroundColor = System.Drawing.SystemColors.Window;
             this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView3.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn2});
-            this.dataGridView3.Location = new System.Drawing.Point(8, 82);
+            this.dataGridViewTextBoxColumn2,
+            this.name,
+            this.formats});
+            this.dataGridView3.Location = new System.Drawing.Point(15, 175);
+            this.dataGridView3.Margin = new System.Windows.Forms.Padding(6);
             this.dataGridView3.Name = "dataGridView3";
             this.dataGridView3.RowHeadersWidth = 51;
             this.dataGridView3.RowTemplate.Height = 25;
-            this.dataGridView3.Size = new System.Drawing.Size(960, 407);
+            this.dataGridView3.Size = new System.Drawing.Size(1783, 868);
             this.dataGridView3.TabIndex = 12;
+            this.dataGridView3.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView3_CellContentClick);
             // 
             // dataGridViewTextBoxColumn2
             // 
-            this.dataGridViewTextBoxColumn2.HeaderText = "report3_grid";
+            this.dataGridViewTextBoxColumn2.HeaderText = "Id";
+            this.dataGridViewTextBoxColumn2.MinimumWidth = 10;
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
             this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            this.dataGridViewTextBoxColumn2.Visible = false;
+            this.dataGridViewTextBoxColumn2.Width = 200;
+            // 
+            // name
+            // 
+            this.name.HeaderText = "Movie Name";
+            this.name.MinimumWidth = 10;
+            this.name.Name = "name";
+            this.name.ReadOnly = true;
+            this.name.Width = 200;
+            // 
+            // formats
+            // 
+            this.formats.HeaderText = "Top 3 Formats";
+            this.formats.MinimumWidth = 10;
+            this.formats.Name = "formats";
+            this.formats.ReadOnly = true;
+            this.formats.Width = 200;
+            // 
+            // dataGridView6
+            // 
+            this.dataGridView6.BackgroundColor = System.Drawing.SystemColors.Window;
+            this.dataGridView6.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView6.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn4});
+            this.dataGridView6.Location = new System.Drawing.Point(15, 175);
+            this.dataGridView6.Margin = new System.Windows.Forms.Padding(6);
+            this.dataGridView6.Name = "dataGridView6";
+            this.dataGridView6.RowHeadersWidth = 51;
+            this.dataGridView6.RowTemplate.Height = 25;
+            this.dataGridView6.Size = new System.Drawing.Size(1783, 868);
+            this.dataGridView6.TabIndex = 14;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.HeaderText = "report4_grid";
+            this.dataGridViewTextBoxColumn4.MinimumWidth = 10;
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ReadOnly = true;
+            this.dataGridViewTextBoxColumn4.Width = 200;
+            // 
+            // dataGridView2
+            // 
+            this.dataGridView2.BackgroundColor = System.Drawing.SystemColors.Window;
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1});
+            this.dataGridView2.Location = new System.Drawing.Point(15, 175);
+            this.dataGridView2.Margin = new System.Windows.Forms.Padding(6);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.RowHeadersWidth = 51;
+            this.dataGridView2.RowTemplate.Height = 25;
+            this.dataGridView2.Size = new System.Drawing.Size(1783, 868);
+            this.dataGridView2.TabIndex = 11;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.HeaderText = "report2_grid";
+            this.dataGridViewTextBoxColumn1.MinimumWidth = 10;
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.dataGridViewTextBoxColumn1.Width = 200;
             // 
             // dataGridView6
             // 
@@ -930,48 +1068,25 @@
             // empLogoutButton
             // 
             this.empLogoutButton.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.empLogoutButton.Location = new System.Drawing.Point(907, 0);
+            this.empLogoutButton.Location = new System.Drawing.Point(1684, 0);
+            this.empLogoutButton.Margin = new System.Windows.Forms.Padding(6);
             this.empLogoutButton.Name = "empLogoutButton";
-            this.empLogoutButton.Size = new System.Drawing.Size(75, 21);
+            this.empLogoutButton.Size = new System.Drawing.Size(139, 45);
             this.empLogoutButton.TabIndex = 1;
             this.empLogoutButton.Text = "Logout";
             this.empLogoutButton.UseVisualStyleBackColor = true;
             this.empLogoutButton.Click += new System.EventHandler(this.empLogoutButton_Click);
             // 
-            // Plan_number
-            // 
-            this.Plan_number.HeaderText = "Plan Number";
-            this.Plan_number.Name = "Plan_number";
-            this.Plan_number.ReadOnly = true;
-            // 
-            // plan_count
-            // 
-            this.plan_count.HeaderText = "Number of users";
-            this.plan_count.Name = "plan_count";
-            this.plan_count.ReadOnly = true;
-            // 
-            // Cost
-            // 
-            this.Cost.HeaderText = "Cost";
-            this.Cost.Name = "Cost";
-            this.Cost.ReadOnly = true;
-            // 
-            // total_income
-            // 
-            this.total_income.HeaderText = "Revenue";
-            this.total_income.Name = "total_income";
-            this.total_income.ReadOnly = true;
-            // 
             // EmployeeViewForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 32F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(984, 559);
+            this.ClientSize = new System.Drawing.Size(1809, 1124);
             this.Controls.Add(this.empLogoutButton);
             this.Controls.Add(this.tabControl1);
-            this.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
-            this.MaximumSize = new System.Drawing.Size(1000, 598);
-            this.MinimumSize = new System.Drawing.Size(1000, 598);
+            this.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.MaximumSize = new System.Drawing.Size(1835, 1195);
+            this.MinimumSize = new System.Drawing.Size(1835, 1195);
             this.Name = "EmployeeViewForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Employee View";
@@ -1074,7 +1189,6 @@
         private DataGridView dataGridView2;
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private DataGridView dataGridView6;
         public TextBox reportsDescriptionTextBox;
         private ComboBox MonthComboBox;
@@ -1083,9 +1197,8 @@
         private DataGridViewTextBoxColumn Revenue;
         private DataGridViewTextBoxColumn Total_Movie_Cost;
         private DataGridViewTextBoxColumn Profits;
-        private DataGridViewTextBoxColumn Plan_number;
-        private DataGridViewTextBoxColumn plan_count;
-        private DataGridViewTextBoxColumn Cost;
-        private DataGridViewTextBoxColumn total_income;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private DataGridViewTextBoxColumn name;
+        private DataGridViewTextBoxColumn formats;
     }
 }

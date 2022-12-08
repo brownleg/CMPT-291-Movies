@@ -314,6 +314,9 @@ namespace MoviesApp
         //when clicking a button, on of the grid views will display
         private void report2Button_Click_1(object sender, EventArgs e)
         {
+            YearComboBox.Visible = true;
+            QuarterComboBox.Visible = true;
+            MonthComboBox.Visible = true;
             reportsDataGridView.Visible = false;
             dataGridView2.Visible = true;
             dataGridView3.Visible = false;
@@ -325,17 +328,25 @@ namespace MoviesApp
         }
         private void report3Button_Click_1(object sender, EventArgs e)
         {
+
+            YearComboBox.Visible = false;
+            QuarterComboBox.Visible = false; ;
+            MonthComboBox.Visible = false;
             reportsDataGridView.Visible = false;
             dataGridView2.Visible = false;
             dataGridView3.Visible = true;
             dataGridView6.Visible = false;
             dataGridView5.Visible = false;
-            reportsDescriptionTextBox.Text = "Report 3: top 5 movies per genre";
+            reportsDescriptionTextBox.Text = "Report 3: Top 5 movies per genre with the top 3 associated formats";
             dataGridView3.BringToFront();
             RBCN = 3;
         }
         private void report4Button_Click_1(object sender, EventArgs e)
         {
+
+            YearComboBox.Visible = true;
+            QuarterComboBox.Visible = true;
+            MonthComboBox.Visible = true;
             reportsDataGridView.Visible = false;
             dataGridView2.Visible = false;
             dataGridView3.Visible = false;
@@ -347,6 +358,9 @@ namespace MoviesApp
         }
         private void report5Button_Click_1(object sender, EventArgs e)
         {
+            YearComboBox.Visible = true;
+            QuarterComboBox.Visible = true;
+            MonthComboBox.Visible = true;
             reportsDataGridView.Visible = false;
             dataGridView2.Visible = false;
             dataGridView3.Visible = false;
@@ -359,6 +373,9 @@ namespace MoviesApp
 
         private void report1Button_Click1(object sender, EventArgs e)
         {
+            YearComboBox.Visible = true;
+            QuarterComboBox.Visible = true;
+            MonthComboBox.Visible = true;
             reportsDataGridView.Visible = true;
             dataGridView2.Visible = false;
             dataGridView3.Visible = false;
@@ -647,7 +664,35 @@ namespace MoviesApp
                     break;
 
                 case 3:
-
+                    string top_5_query = @"
+select top_5.movie_id, m.movie_name, t4.[Top 3 Formats] from (select TOP 5 o.movie_id, count(*) number_of_copies from Orders o
+group by o.movie_id
+order by count(*) DESC, o.movie_id) top_5
+left outer join (
+select movie_id, STRING_AGG(format, ', ') 'Top 3 Formats' from (
+	select movie_id, format, ROW_NUMBER() OVER (PARTITION BY movie_id ORDER BY times_format_rented DESC) as row_num
+		from (
+			select distinct movie_id, format, COUNT(format) OVER (PARTITION BY movie_id, format) times_format_rented from (
+					SELECT o.order_id, o.movie_id, c.copy_id, c.format from Orders o
+					left outer join Movie_copies c
+					on o.movie_id = c.movie_id and o.copy_id = c.copy_id) temp
+				) temp2) t3
+				where row_num <= 3
+				group by movie_id) t4
+on t4.movie_id = top_5.movie_id
+left outer join Movie m
+on m.movie_id = top_5.movie_id
+";
+                    dataGridView3.Rows.Clear();
+                    SqlDataReader? top_5_data = connection.GetDataReader(top_5_query);
+                    if (top_5_data != null && top_5_data.HasRows)
+                    {
+                        while (top_5_data.Read())
+                        {
+                            dataGridView3.Rows.Add(top_5_data["movie_id"].ToString(), top_5_data["movie_name"].ToString(), top_5_data["Top 3 Formats"].ToString());
+                        }
+                        top_5_data.Close();
+                    }
                     break;
                 case 4:
 
@@ -664,6 +709,21 @@ namespace MoviesApp
         {
             Year_picked = Int32.Parse(YearComboBox.Text);
             YearComboBox.Text = Year_picked.ToString();
+        }
+
+        private void dataGridView3_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex < 0)
+                return;
+
+            // Get clicked movie id
+            int clickedMovieId = Int32.Parse(dataGridView3.Rows[e.RowIndex].Cells[0].Value.ToString());
+
+            // Pass movie id of clicked-on row into MovieForm
+            MovieForm f2 = new MovieForm(ID, connection, clickedMovieId);
+            
+            // Open the window
+            f2.ShowDialog(); //showing form after creation
         }
     }
 }
