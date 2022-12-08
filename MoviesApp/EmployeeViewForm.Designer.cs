@@ -706,6 +706,8 @@
             this.reportsTabPage.Controls.Add(this.report1Button);
             this.reportsTabPage.Controls.Add(this.reportsDescriptionTextBox);
             this.reportsTabPage.Controls.Add(this.label1);
+            this.reportsTabPage.Controls.Add(this.dataGridView6);
+            this.reportsTabPage.Controls.Add(this.dataGridView2);
             this.reportsTabPage.Controls.Add(this.reportsDataGridView);
             this.reportsTabPage.Controls.Add(this.dataGridView5);
             this.reportsTabPage.Controls.Add(this.dataGridView3);
@@ -1028,6 +1030,41 @@
             this.dataGridViewTextBoxColumn1.ReadOnly = true;
             this.dataGridViewTextBoxColumn1.Width = 200;
             // 
+            // dataGridView6
+            // 
+            this.dataGridView6.BackgroundColor = System.Drawing.SystemColors.Window;
+            this.dataGridView6.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView6.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Plan_number,
+            this.plan_count,
+            this.Cost,
+            this.total_income});
+            this.dataGridView6.Location = new System.Drawing.Point(8, 82);
+            this.dataGridView6.Name = "dataGridView6";
+            this.dataGridView6.RowHeadersWidth = 51;
+            this.dataGridView6.RowTemplate.Height = 25;
+            this.dataGridView6.Size = new System.Drawing.Size(960, 407);
+            this.dataGridView6.TabIndex = 14;
+            // 
+            // dataGridView2
+            // 
+            this.dataGridView2.BackgroundColor = System.Drawing.SystemColors.Window;
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1});
+            this.dataGridView2.Location = new System.Drawing.Point(8, 82);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.RowHeadersWidth = 51;
+            this.dataGridView2.RowTemplate.Height = 25;
+            this.dataGridView2.Size = new System.Drawing.Size(960, 407);
+            this.dataGridView2.TabIndex = 11;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.HeaderText = "report2_grid";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
             // empLogoutButton
             // 
             this.empLogoutButton.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
@@ -1153,7 +1190,6 @@
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private DataGridView dataGridView6;
-        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         public TextBox reportsDescriptionTextBox;
         private ComboBox MonthComboBox;
         private ComboBox QuarterComboBox;

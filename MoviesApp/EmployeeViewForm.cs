@@ -441,7 +441,6 @@ namespace MoviesApp
                         string costs = "0";
                         full_date = Year_picked.ToString() + Month_picked + "01";
 
-                        reportsDescriptionTextBox.Text = full_date;
 
                         string query = $"select sum(temp2.revenue) as total_revenue " +
                                        $"from(select count(*) as plan_count, temp.cost, (count(*) * temp.cost) as revenue " +
@@ -485,8 +484,10 @@ namespace MoviesApp
                                 Q1[0] = Year_picked.ToString() + "0101";
                                 Q1[1] = Year_picked.ToString() + "0201";
                                 Q1[2] = Year_picked.ToString() + "0301";
+
                                 foreach (string full_date1 in Q1)
                                 {
+
 
                                     query1 = $"select sum(temp2.revenue) as total_revenue " +
                                                    $"from(select count(*) as plan_count, temp.cost, (count(*) * temp.cost) as revenue " +
@@ -606,7 +607,6 @@ namespace MoviesApp
                                 double profits3 = revenue3 - (float.Parse(costs3) * 3);
                                 reportsDataGridView.Rows.Add(revenue3, costs3, profits3);
                                 return;
-
 
                             case 4:
                                 var Q4 = new string[3];
