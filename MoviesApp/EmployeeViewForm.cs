@@ -424,7 +424,6 @@ namespace MoviesApp
                         string costs = "0";
                         full_date = Year_picked.ToString() + Month_picked + "01";
 
-                        reportsDescriptionTextBox.Text = full_date;
 
                         string query = $"select sum(temp2.revenue) as total_revenue " +
                                        $"from(select count(*) as plan_count, temp.cost, (count(*) * temp.cost) as revenue " +
@@ -457,7 +456,188 @@ namespace MoviesApp
                     }
                     else //long, looping search and add
                     {
+                        switch (Quarter_picked)
+                        {
+                            case 1:
+                                double revenue1 = 0;
+                                string revenue_1 = "0";
+                                string costs1 = "0";
+                                string query1;
+                                var Q1 = new string[3];
+                                Q1[0] = Year_picked.ToString() + "0101";
+                                Q1[1] = Year_picked.ToString() + "0201";
+                                Q1[2] = Year_picked.ToString() + "0301";
+                                foreach (string full_date1 in Q1) {
+                                    
+                                    query1 = $"select sum(temp2.revenue) as total_revenue " +
+                                                   $"from(select count(*) as plan_count, temp.cost, (count(*) * temp.cost) as revenue " +
+                                                   $"from(select P.plan_number, C.account_number, P.cost " +
+                                                   $"from Customer C, Plans P " +
+                                                   $"where P.plan_number = C.plan_number and C.start_date < '{full_date1}' and C.end_date >= '{full_date1}') as temp " +
+                                                   $"group by temp.plan_number, temp.cost) as temp2";
 
+                                    SqlDataReader? revdata1 = connection.GetDataReader(query1);
+                                    if (revdata1 != null && revdata1.HasRows)
+                                    {
+                                        revdata1.Read();                  //to see the data you must read() first
+                                        revenue_1 = revdata1["total_revenue"].ToString(); //.ToString();     
+                                        revdata1.Close();                //closes the reader after the data is read in
+                                        revenue1 = revenue1 + Convert.ToDouble(revenue_1);
+                                    }
+
+                                }
+                                query1 = $"select sum(M.distribution_fee) as total_movie_cost " +
+                                        $"from Movie M;";
+                                SqlDataReader? costdata1 = connection.GetDataReader(query1);
+                                if (costdata1 != null && costdata1.HasRows)
+                                {
+                                    costdata1.Read();                                     //to see the data you must read() first
+                                    costs1 = costdata1["total_movie_cost"].ToString();
+                                    costdata1.Close();                //closes the reader after the data is read in
+                                }
+
+                                double profits1 = revenue1 - (float.Parse(costs1) * 3);
+                                reportsDataGridView.Rows.Add(revenue1, costs1, profits1);
+
+                                return;
+
+                            case 2:
+
+                                var Q2 = new string[3];
+                                Q2[0] = Year_picked.ToString() + "0401";
+                                Q2[1] = Year_picked.ToString() + "0501";
+                                Q2[2] = Year_picked.ToString() + "0601";
+                                double revenue2 = 0;
+                                string revenue_2 = "0";
+                                string costs2 = "0";
+                                string query2;
+                                foreach (string full_date2 in Q2)
+                                {
+
+                                    query2 = $"select sum(temp2.revenue) as total_revenue " +
+                                                   $"from(select count(*) as plan_count, temp.cost, (count(*) * temp.cost) as revenue " +
+                                                   $"from(select P.plan_number, C.account_number, P.cost " +
+                                                   $"from Customer C, Plans P " +
+                                                   $"where P.plan_number = C.plan_number and C.start_date < '{full_date2}' and C.end_date >= '{full_date2}') as temp " +
+                                                   $"group by temp.plan_number, temp.cost) as temp2";
+
+                                    SqlDataReader? revdata2 = connection.GetDataReader(query2);
+                                    if (revdata2 != null && revdata2.HasRows)
+                                    {
+                                        revdata2.Read();                  //to see the data you must read() first
+                                        revenue_2 = revdata2["total_revenue"].ToString(); //.ToString();     
+                                        revdata2.Close();                //closes the reader after the data is read in
+                                        revenue2 = revenue2 + Convert.ToDouble(revenue_2);
+                                    }
+
+                                }
+                                query2 = $"select sum(M.distribution_fee) as total_movie_cost " +
+                                        $"from Movie M;";
+                                SqlDataReader? costdata2 = connection.GetDataReader(query2);
+                                if (costdata2 != null && costdata2.HasRows)
+                                {
+                                    costdata2.Read();                                     //to see the data you must read() first
+                                    costs2 = costdata2["total_movie_cost"].ToString();
+                                    costdata2.Close();                //closes the reader after the data is read in
+                                }
+
+                                double profits2 = revenue2 - (float.Parse(costs2) * 3);
+                                reportsDataGridView.Rows.Add(revenue2, costs2, profits2);
+                                return;
+
+                            case 3:
+                                var Q3 = new string[3];
+                                Q3[0] = Year_picked.ToString() + "0701";
+                                Q3[1] = Year_picked.ToString() + "0801";
+                                Q3[2] = Year_picked.ToString() + "0901";
+                                double revenue3 = 0;
+                                string revenue_3 = "0";
+                                string costs3 = "0";
+                                string query3;
+                                foreach (string full_date3 in Q3)
+                                {
+
+                                    query3 = $"select sum(temp2.revenue) as total_revenue " +
+                                                   $"from(select count(*) as plan_count, temp.cost, (count(*) * temp.cost) as revenue " +
+                                                   $"from(select P.plan_number, C.account_number, P.cost " +
+                                                   $"from Customer C, Plans P " +
+                                                   $"where P.plan_number = C.plan_number and C.start_date < '{full_date3}' and C.end_date >= '{full_date3}') as temp " +
+                                                   $"group by temp.plan_number, temp.cost) as temp2";
+
+                                    SqlDataReader? revdata3 = connection.GetDataReader(query3);
+                                    if (revdata3 != null && revdata3.HasRows)
+                                    {
+                                        revdata3.Read();                  //to see the data you must read() first
+                                        revenue_3 = revdata3["total_revenue"].ToString(); //.ToString();     
+                                        revdata3.Close();                //closes the reader after the data is read in
+                                        revenue3 = revenue3 + Convert.ToDouble(revenue_3);
+                                    }
+
+                                }
+                                query3 = $"select sum(M.distribution_fee) as total_movie_cost " +
+                                        $"from Movie M;";
+                                SqlDataReader? costdata3 = connection.GetDataReader(query3);
+                                if (costdata3 != null && costdata3.HasRows)
+                                {
+                                    costdata3.Read();                                     //to see the data you must read() first
+                                    costs3 = costdata3["total_movie_cost"].ToString();
+                                    costdata3.Close();                //closes the reader after the data is read in
+                                }
+
+                                double profits3 = revenue3 - (float.Parse(costs3) * 3);
+                                reportsDataGridView.Rows.Add(revenue3, costs3, profits3);
+                                return;
+                                
+
+                            case 4:
+                                var Q4 = new string[3];
+                                Q4[0] = Year_picked.ToString() + "1001";
+                                Q4[1] = Year_picked.ToString() + "1101";
+                                Q4[2] = Year_picked.ToString() + "1201";
+                                double revenue4 = 0;
+                                string revenue_4 = "0";
+                                string costs4 = "0";
+                                string query4;
+                                foreach (string full_date4 in Q4)
+                                {
+
+                                    query4 = $"select sum(temp2.revenue) as total_revenue " +
+                                                   $"from(select count(*) as plan_count, temp.cost, (count(*) * temp.cost) as revenue " +
+                                                   $"from(select P.plan_number, C.account_number, P.cost " +
+                                                   $"from Customer C, Plans P " +
+                                                   $"where P.plan_number = C.plan_number and C.start_date < '{full_date4}' and C.end_date >= '{full_date4}') as temp " +
+                                                   $"group by temp.plan_number, temp.cost) as temp2";
+
+                                    SqlDataReader? revdata4 = connection.GetDataReader(query4);
+                                    if (revdata4 != null && revdata4.HasRows)
+                                    {
+                                        revdata4.Read();                  //to see the data you must read() first
+                                        revenue_4 = revdata4["total_revenue"].ToString(); //.ToString();     
+                                        revdata4.Close();                //closes the reader after the data is read in
+                                        revenue4 = revenue4 + Convert.ToDouble(revenue_4);
+                                    }
+
+                                }
+                                query4 = $"select sum(M.distribution_fee) as total_movie_cost " +
+                                        $"from Movie M;";
+                                SqlDataReader? costdata4 = connection.GetDataReader(query4);
+                                if (costdata4 != null && costdata4.HasRows)
+                                {
+                                    costdata4.Read();                                     //to see the data you must read() first
+                                    costs4 = costdata4["total_movie_cost"].ToString();
+                                    costdata4.Close();                //closes the reader after the data is read in
+                                }
+
+                                double profits4 = revenue4 - (float.Parse(costs4) * 3);
+                                reportsDataGridView.Rows.Add(revenue4, costs4, profits4);
+                                return;
+
+                            case 5:
+
+
+                                return;
+
+                        }
                     }
 
                     break;
